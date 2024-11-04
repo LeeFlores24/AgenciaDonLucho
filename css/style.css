@@ -1,0 +1,503 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #070101;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #050101;
+    color: rgb(238, 15, 15);
+    position: relative;
+}
+
+.header-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.5em;
+    color: rgb(7, 245, 225);
+    font-weight: 600;
+}
+
+/* Sección izquierda: imagen de oferta y texto */
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.promo-image {
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.promo-text {
+    color: #970cd8;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.promo-dropdown {
+    color: #a19206;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: #ffffff;
+    border: 2px solid #850aeb;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.promo-dropdown:hover {
+    background-color: #9613ee;
+    color: white;
+}
+
+/* Redes sociales verticales */
+.social-icons {
+    position: absolute;
+    left: 20px;
+    top: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #333;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #550888;
+}
+
+/* Estilos para los enlaces de autenticación */
+.header-right {
+    display: flex;
+    align-items: center; /* Alinear verticalmente los elementos */
+}
+
+.auth-link {
+    color: rgb(236, 214, 14); /* Color de texto */
+    text-decoration: none; /* Sin subrayado */
+    padding: 10px 15px; /* Espaciado interno para más clickeable */
+    transition: color 0.3s; /* Transición suave para el color */
+}
+
+.auth-link:hover {
+    color: #2d0349; /* Color al pasar el mouse */
+}
+
+/* Estilo para la línea divisoria */
+.divider {
+    width: 2px; /* Ancho de la línea */
+    height: 20px; /* Alto de la línea */
+    background-color: white; /* Color de la línea */
+    margin: 0 10px; /* Espaciado horizontal */
+}
+
+/* Carrusel de imágenes */
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto;
+    padding: 20px;
+    width: 60%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-images img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+}
+/* Carrusel de imágenes */
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto;
+    padding: 20px;
+    width: 60%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-images img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Botones del carrusel */
+.carousel-button {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px; /* Espaciado interno */
+    cursor: pointer; /* Cursor en forma de puntero */
+    border-radius: 5px; /* Bordes redondeados */
+    position: absolute; /* Posición absoluta */
+    z-index: 10; /* Asegura que estén sobre las imágenes */
+}
+
+.carousel-button.left {
+    left: 10px; /* Posición a la izquierda */
+}
+
+.carousel-button.right {
+    right: 10px; /* Posición a la derecha */
+}
+
+/* Indicadores */
+.carousel-indicators {
+    position: absolute; /* Posición absoluta */
+    bottom: 10px; /* Ubicación inferior */
+    left: 50%; /* Centrar */
+    transform: translateX(-50%); /* Ajustar posición */
+    display: flex; /* Flexbox para alinear los indicadores */
+    gap: 5px; /* Espaciado entre los indicadores */
+}
+
+.indicator {
+    width: 10px; /* Ancho del indicador */
+    height: 10px; /* Alto del indicador */
+    background-color: #ccc; /* Color gris por defecto */
+    border-radius: 50%; /* Bordes redondeados */
+    cursor: pointer; /* Cursor en forma de puntero */
+    transition: background-color 0.3s; /* Transición para el color */
+}
+
+.indicator.active {
+    background-color: #4f045e; /* Color activo */
+}
+
+.indicator:hover {
+    background-color: #860380; /* Color al pasar el mouse */
+}
+/* Estilos para la sección de destinos */
+.destinations {
+    text-align: center; /* Centrar texto */
+    margin: 50px auto; /* Espaciado superior e inferior */
+    padding: 20px; /* Espaciado interno */
+    background-color: #f9f9f9; /* Color de fondo */
+}
+
+.destinations h2 {
+    font-size: 2em; /* Tamaño del encabezado */
+    color: #030101; /* Color del texto */
+    margin-bottom: 20px; /* Espacio debajo del encabezado */
+}
+
+.destination-cards {
+    display: flex; /* Disposición en fila */
+    justify-content: center; /* Centrar los cuadros */
+    gap: 20px; /* Espacio entre los cuadros */
+}
+
+.destination-card {
+    background-color: white; /* Color de fondo blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    overflow: hidden; /* Cortar elementos que sobresalen */
+    width: 300px; /* Ancho del cuadro */
+    transition: transform 0.3s; /* Transición suave al pasar el mouse */
+}
+
+.destination-card:hover {
+    transform: scale(1.05); /* Aumentar tamaño al pasar el mouse */
+}
+
+.destination-image {
+    width: 100%; /* Ancho completo del cuadro */
+    height: 200px; /* Altura fija para las imágenes */
+    object-fit: cover; /* Cubrir el área sin distorsión */
+}
+
+.destination-card h3 {
+    margin: 10px 0; /* Espacio vertical */
+    font-size: 1.5em; /* Tamaño de la fuente */
+    color: #333; /* Color del texto */
+}
+
+.destination-card p {
+    padding: 0 15px; /* Espaciado interno lateral */
+    color: #666; /* Color gris para la descripción */
+}
+
+.flag {
+    font-size: 2em; /* Tamaño del logo */
+    margin-top: 10px; /* Espacio superior */
+    display: block; /* Mostrar como bloque */
+    color: #660872; /* Color del logo */
+}
+.flag {
+    font-size: 2em; /* Tamaño del logo */
+    margin-top: 10px; /* Espacio superior */
+    display: block; /* Mostrar como bloque */
+    color: #510192; /* Color del logo */
+}
+
+.country-flag {
+    font-size: 1.5em; /* Tamaño del logo del país */
+    margin-top: 5px; /* Espacio superior para el logo */
+    color: #8015be; /* Color del logo */
+}
+/* Estilos generales para la sección de comentarios */
+.reviews {
+    background-color: #f9f9f9; /* Fondo suave */
+    padding: 40px 20px; /* Espaciado interno */
+    text-align: center; /* Centrar texto */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.reviews h2 {
+    font-size: 2rem; /* Tamaño de fuente para el título */
+    margin-bottom: 20px; /* Espacio inferior */
+    color: #333; /* Color del texto */
+}
+
+/* Estilos para el carrusel de reseñas */
+.review-carousel {
+    position: relative; /* Posicionamiento relativo para los botones */
+    max-width: 800px; /* Ancho máximo del carrusel */
+    margin: 0 auto; /* Centrar el carrusel */
+    overflow: hidden; /* Ocultar elementos fuera del contenedor */
+}
+
+/* Contenedor de reseñas */
+.review-content {
+    display: flex; /* Flexbox para alineación horizontal */
+    transition: transform 0.5s ease-in-out; /* Animación suave para el desplazamiento */
+}
+
+/* Estilo para cada reseña */
+.review-item {
+    min-width: 100%; /* Cada reseña ocupa el 100% del ancho del carrusel */
+    padding: 20px; /* Espaciado interno */
+    box-sizing: border-box; /* Incluir padding en el tamaño total */
+    text-align: left; /* Alinear texto a la izquierda */
+}
+
+.review-item.active {
+    opacity: 1; /* Reseña activa completamente visible */
+    transition: opacity 0.5s ease; /* Suavizar la transición */
+}
+
+.review-item:not(.active) {
+    opacity: 0; /* Ocultar reseñas no activas */
+}
+
+/* Estilos para la imagen del usuario */
+.user-image {
+    width: 80px; /* Ancho de la imagen del usuario */
+    height: 80px; /* Alto de la imagen del usuario */
+    border-radius: 50%; /* Hacer la imagen circular */
+    margin-right: 15px; /* Espacio entre imagen y texto */
+    object-fit: cover; /* Mantener proporciones */
+}
+
+/* Estilo para el texto de la reseña */
+.review-text {
+    font-size: 1.2rem; /* Tamaño de fuente para el texto de la reseña */
+    color: #555; /* Color del texto */
+    margin: 10px 0; /* Espacio superior e inferior */
+}
+
+/* Estilo para el nombre del usuario */
+.user-name {
+    font-weight: bold; /* Negrita para el nombre */
+    color: #222; /* Color del nombre */
+}
+
+/* Estilos para las estrellas de calificación */
+.star-rating {
+    display: flex; /* Alinear estrellas horizontalmente */
+    margin: 10px 0; /* Espacio superior e inferior */
+}
+
+.star {
+    color: #FFD700; /* Color dorado para las estrellas */
+    font-size: 1.5rem; /* Tamaño de las estrellas */
+}
+
+/* Estilos para los botones */
+.review-button {
+    background-color: #8408d6; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    padding: 10px 15px; /* Espaciado interno */
+    cursor: pointer; /* Cursor en forma de mano */
+    transition: background-color 0.3s ease; /* Suavizar el cambio de color */
+}
+
+.review-button:hover {
+    background-color: #d9fa1f; /* Color más oscuro al pasar el mouse */
+}
+
+/* Estilos para los botones de navegación */
+.review-button.left {
+    position: absolute; /* Posicionamiento absoluto */
+    left: 10px; /* Espacio a la izquierda */
+    top: 50%; /* Centrar verticalmente */
+    transform: translateY(-50%); /* Ajustar centramiento */
+}
+
+.review-button.right {
+    position: absolute; /* Posicionamiento absoluto */
+    right: 10px; /* Espacio a la derecha */
+    top: 50%; /* Centrar verticalmente */
+    transform: translateY(-50%); /* Ajustar centramiento */
+}
+.reservations {
+    margin: 40px 0;
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.reservation-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.reservation-box {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 10px;
+    flex: 1;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.location-input {
+    width: calc(100% - 40px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #2eb30d;
+    border-radius: 5px;
+}
+
+.calendar-btn {
+    background-color: #34d80b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+.calendar-btn:hover {
+    background-color: #aaa128; /* Color más oscuro al pasar el ratón */
+}
+
+.date-selected {
+    margin: 5px 0;
+    font-weight: bold;
+    color: #adce1a;
+}
+
+.calendar {
+    margin-top: 20px;
+    border: 1px solid #9ba50a;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.calendar h3 {
+    margin-bottom: 15px;
+}
+
+#local-date-picker,
+#destination-date-picker {
+    padding: 10px;
+    border: 1px solid #4c059e;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 80%;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5017bb;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3; /* Color más oscuro al pasar el ratón */
+}
+.footer {
+    background-color: #0f0303; /* Colblacor de fondo del footer */
+    color: white; /* Color del texto */
+    text-align: center; /* Centrar texto */
+    padding: 20px; /* Espaciado interno */
+    position: relative; /* Posición relativa para el efecto de superposición */
+    bottom: 0; /* Alinear al fondo */
+    width: 100%; /* Ancho completo */
+}
+
+.footer-content {
+    max-width: 1200px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centrar el contenido */
+}
+
+.footer p {
+    margin: 0; /* Quitar márgenes */
+    font-size: 16px; /* Tamaño de fuente */
+}
+
+/* Estilo para el año actual */
+#current-year {
+    font-weight: bold; /* Resaltar el año */
+}
+
+
+
+
